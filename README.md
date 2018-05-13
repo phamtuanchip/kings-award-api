@@ -11,3 +11,5 @@
 # For kingsaward data
 ## dotnet ef migrations add kingsawardMigration --context=KingsAwardDataBase
 ## dotnet ef database update --context=KingsAwardDataBase
+# Download this one and install to run app in iis 
+## https://go.microsoft.com/fwlink/?linkid=844461
