@@ -245,5 +245,11 @@ namespace AspNet5SQLite.Repositories
         {
             throw new System.NotImplementedException();
         }
+
+        public List<Task> GetTaskByName(string name)
+        {
+            //throw new System.NotImplementedException();
+            return _context.Tasks.Where(t => t.Name.Contains(name)).ToList();
+        }
     }
 }

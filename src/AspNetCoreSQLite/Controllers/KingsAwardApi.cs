@@ -25,8 +25,9 @@ namespace AspNet5SQLite.Controllers
 
         
         [HttpGet("tasks")]
-        public  IEnumerable<AspNetCoreSQLite.Model.Task> tasks()
+        public  IEnumerable<AspNetCoreSQLite.Model.Task> tasks(string name)
         {
+            if(name != null) return _dataBase.GetTaskByName(name);
             return _dataBase.GetAllTask();
         }
 
@@ -37,7 +38,7 @@ namespace AspNet5SQLite.Controllers
         {
             return _dataBase.GetTask(id);
         }
-
+        
         // POST api/<controller>
         [HttpPost("tasks")]
         public void Post([FromBody]AspNetCoreSQLite.Model.Task value)

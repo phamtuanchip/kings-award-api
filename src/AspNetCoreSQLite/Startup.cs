@@ -38,6 +38,16 @@ namespace AspNet5SQLite
                options.UseSqlite(connection)
            );
 
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
+
             services.AddMvc().AddJsonOptions(options =>
             {
                 options.SerializerSettings.ContractResolver = new DefaultContractResolver();
@@ -45,6 +55,7 @@ namespace AspNet5SQLite
             services.AddScoped<IDataEventRecordRepository, DataEventRecordRepository>();
 
             services.AddScoped<IDataBase, DataBaseImpl>();
+             
         }
 
          public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -56,8 +67,15 @@ namespace AspNet5SQLite
             app.UseRequestLocalization(locOptions.Value);
 
             app.UseStaticFiles();
-
+            app.UseCors("CorsPolicy");
+            // app.UseCors(builder =>
+            //    builder.WithOrigins("http://localhost")
+            //.AllowAnyHeader()
+            //  );
             app.UseMvc();
+            
+            // Shows UseCors with CorsPolicyBuilder.
+
         }
     }
 }

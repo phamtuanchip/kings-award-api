@@ -42,7 +42,7 @@ namespace AspNet5SQLite.Repositories
         List<Archive> GetAllArchive();
         void PostArchive(Archive data);
         void PutArchive(long id, [FromBody] Archive data);
-
+        List<Task> GetTaskByName(string name);
 
         void DeleteActivity(long id);
         Activity GetActivity(long id);
