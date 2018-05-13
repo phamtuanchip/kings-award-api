@@ -34,11 +34,17 @@ namespace AspNet5SQLite
                 options.UseSqlite(connection)
             );
 
+            services.AddDbContext<KingsAwardDataBase>(options =>
+               options.UseSqlite(connection)
+           );
+
             services.AddMvc().AddJsonOptions(options =>
             {
                 options.SerializerSettings.ContractResolver = new DefaultContractResolver();
             });
             services.AddScoped<IDataEventRecordRepository, DataEventRecordRepository>();
+
+            services.AddScoped<IDataBase, DataBaseImpl>();
         }
 
          public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
