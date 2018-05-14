@@ -8,9 +8,9 @@ namespace AspNetCoreSQLite.Model
     public class Archive : Base
     {
         public string DateTime { get; set; }
-        long childrenId { get; set; }
-        long awardsId { get; set; }
-        long ArchivePoints { get; set; }
-        List<TaskDone> TaskDone { get; set; }
+        public long childrenId { get; set; }
+        public long awardsId { get; set; }
+        public long ArchivePoints { get; set; }
+        public List<TaskDone> TaskDone { get; set; }
     }
 }

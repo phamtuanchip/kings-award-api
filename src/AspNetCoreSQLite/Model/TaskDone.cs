@@ -7,7 +7,7 @@ namespace AspNetCoreSQLite.Model
 {
     public class TaskDone : Base
     {
-          long  tasksId { get; set; }
-          int Point { get; set; }
+        public long  tasksId { get; set; }
+        public int Point { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace AspNetCoreSQLite.Model
     public class Task : Base
     {
       
-       int  DefaultPoint { get; set; }
-       int ManualPoint { get; set; }
+      public int  DefaultPoint { get; set; }
+        public int ManualPoint { get; set; }
     }
 }
