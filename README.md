@@ -1,4 +1,5 @@
 # kings-award-api
+## Change connection to db file in config.json point to corret db file path
 # In kings-award-api root folder run bellow commands 
 ## dotnet restore
 # install 'Microsoft.EntityFrameworkCore.Design' 2.0 vir cmd or / nuget managers

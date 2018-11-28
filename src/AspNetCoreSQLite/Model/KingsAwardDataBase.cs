@@ -25,7 +25,7 @@ namespace AspNet5SQLite.Model
             builder.Entity<Award>().HasKey(m => m.id);
             builder.Entity<Activity>().HasKey(m => m.id);
             base.OnModelCreating(builder);
-
+          
         } 
     }
 }

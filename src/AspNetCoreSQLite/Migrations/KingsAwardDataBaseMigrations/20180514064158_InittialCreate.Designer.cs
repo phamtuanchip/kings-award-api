@@ -11,9 +11,10 @@ using System;
 namespace AspNetCoreSQLite.Migrations.KingsAwardDataBaseMigrations
 {
     [DbContext(typeof(KingsAwardDataBase))]
-    partial class KingsAwardDataBaseModelSnapshot : ModelSnapshot
+    [Migration("20180514064158_InittialCreate")]
+    partial class InittialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

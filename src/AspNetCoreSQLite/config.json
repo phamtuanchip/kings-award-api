@@ -1,5 +1,5 @@
 ﻿{
   "Production": {
-    "SqliteConnectionString": "Data Source=D:\\projects\\kings-award-api\\dataeventrecords.sqlite"
+    "SqliteConnectionString": "Data Source=C:\\projects\\kings-award-api\\dataeventrecords.sqlite"
   }
 }
